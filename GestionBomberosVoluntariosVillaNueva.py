@@ -212,6 +212,24 @@ def mostrar():
 		tipoSiniestro=tipoSiniestro+"Falsa Alarma"
 	else:
 		return tipoSiniestro
+		
+def magnitud():
+	mostrarMagnitud=magnitudes.get()
+	return mostrarMagnitud
+	
+def alarma():
+	alarmasiono=toque_alarma.get()
+	if(alarmasiono==1):
+		return "Si"
+	else:
+		return "No"
+
+def gral():
+	generalsiono=general.get()
+	if(generalsiono==1):
+		return "Si"
+	else:
+		return "No"
 
 def guardar():
         nombrearch=FileDialog.asksaveasfilename(initialdir = "/home/toti/Escritorio",title = "Guardar como",filetypes = (("txt files","*.txt"),("todos los archivos","*.*")))
@@ -226,12 +244,18 @@ def guardar():
             archi1.write("Entre calles: "+str(entry5.get())+"\n")
             archi1.write("Localidad: "+str(cbx.get())+"\n")
             archi1.write("Tipo de Siniestro:"+mostrar()+ "\n")
-            archi1.write("Magnitud: "+"\n")
-            archi1.write("Toque de alarma: "+"\n")
-            archi1.write("General: "+"\n")
+            archi1.write("Magnitud: "+magnitud()+"\n")
+            archi1.write("Toque de alarma: "+alarma()+"\n")
+            archi1.write("General: "+gral()+"\n")
             archi1.write("Resumen: "+"\n"+str(resumen.get("1.0", "end-1c"))+"\n")
             archi1.close()
             mb.showinfo(message="Emergencia Guardada con Exito!", title="Emergencia Guardada")
+
+def reiniciar():
+        nombrearch=FileDialog.askopenfilename(initialdir = "/home/toti/Escritorio",title = "Seleccione archivo",filetypes = (("txt files","*.txt"),("todos los archivos","*.*")))
+        if nombrearch!='':
+        	print(nombrearch)
+        	os.system(" {nombrearch}")
 
 def buscar_archivo():
     fichero=FileDialog.askopenfilename(title="Abrir Fichero")
@@ -539,43 +563,47 @@ Programa.add_separator=ttk.Separator(Programa, orient="vertical").place(relx=0.5
 label_magnitud=Label(Programa, text="Magnitud: ")
 label_magnitud.place(x=800, y=130)
 
-magnitud=IntVar()
-Radiobutton(Programa, text="1", variable=magnitud, value=1, command=receptor).place(x=870, y=130)
-Radiobutton(Programa, text="2", variable=magnitud, value=2, command=receptor).place(x=920, y=130)
-Radiobutton(Programa, text="3", variable=magnitud, value=3, command=receptor).place(x=970, y=130)
+magnitudes=StringVar(Programa, "Magnitud 1")
+Radiobutton(Programa, text="1", variable=magnitudes, value="1", command=magnitud).place(x=870, y=130)
+Radiobutton(Programa, text="2", variable=magnitudes, value="2", command=magnitud).place(x=920, y=130)
+Radiobutton(Programa, text="3", variable=magnitudes, value="3", command=magnitud).place(x=970, y=130)
+
 
 label_toque_alarma=Label(Programa, text="Toque de Alarma: ")
 label_toque_alarma.place(x=800, y=160)
 
 toque_alarma=IntVar()
-Radiobutton(Programa, text="Si", variable=toque_alarma, value=1, command=receptor).place(x=920, y=160)
-Radiobutton(Programa, text="No", variable=toque_alarma, value=2, command=receptor).place(x=970, y=160)
+Radiobutton(Programa, text="Si", variable=toque_alarma, value=1, command=alarma).place(x=920, y=160)
+Radiobutton(Programa, text="No", variable=toque_alarma, value=2, command=alarma).place(x=970, y=160)
 
 label_general=Label(Programa, text="General: ")
 label_general.place(x=800, y=190)
 
 general=IntVar()
-Radiobutton(Programa, text="Si", variable=general, value=1, command=receptor).place(x=860, y=190)
-Radiobutton(Programa, text="No", variable=general, value=2, command=receptor).place(x=910, y=190)
+Radiobutton(Programa, text="Si", variable=general, value=1, command=gral).place(x=860, y=190)
+Radiobutton(Programa, text="No", variable=general, value=2, command=gral).place(x=910, y=190)
 
 #######################################################################
 #Punto 5
 #######################################################################
 
 boton1=Button(Programa, text="Guardar Emergencia", command=guardar, background="#b4b4b4")
-boton1.config(bd=8, relief=RAISED)
-boton1.place(x=10, y=400, width=200, height=100)
+boton1.config(bd=5, relief=RAISED)
+boton1.place(x=820, y=610, width=150, height=50)
 
-boton2=Button(Programa, text="Reiniciar", command=guardar, background="#b4b4b4")
-boton2.config(bd=8, relief=RAISED)
-boton2.place(x=250, y=400, width=200, height=100)
+boton2=Button(Programa, text="Reiniciar", command=reiniciar, background="#b4b4b4")
+boton2.config(bd=5, relief=RAISED)
+boton2.place(x=1000, y=610, width=150, height=50)
 
 boton3=Button(Programa, text="Salir", command=Programa.quit, background="#b4b4b4")
-boton3.config(bd=8, relief=RAISED)
-boton3.place(x=500, y=400, width=200, height=100)
+boton3.config(bd=5, relief=RAISED)
+boton3.place(x=1180, y=610, width=150, height=50)
+
+label8=Label(Programa, text="RESUMEN")
+label8.place(x=10, y=350)
 
 resumen=Text(Programa)
-resumen.place(x=500, y=500, width=200, height=100)
+resumen.place(x=10, y=370, width=1335, height=230)
 
 #######################################################################
 #Punto 6
