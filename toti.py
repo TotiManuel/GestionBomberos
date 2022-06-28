@@ -26,9 +26,10 @@ class Aplicacion:
         #Configuracion del Menu
         self.agregar_menu()
         #Configuracion del Resumen
-        self.scrolledtext1=st.ScrolledText(self.ventana1, width=100, height=35, wrap=tk.WORD)
+        self.scrolledtext1=st.ScrolledText(self.ventana1, width=10, height=10, padx=150,pady=150, wrap=tk.WORD)
+        self.scrolledtext2=st.ScrolledText(self.ventana1, width=30, height=30, wrap=tk.WORD)
         #Configuracion de los Label
-        ttk.Label(self.ventana1, text="RESUMEN").grid(column=0, row=0)
+        ttk.Label(self.ventana1, text="Aviso efectuado por: ").grid(column=0, row=0)
         ttk.Label(self.ventana1, text="Hay Heridos?").place(x=850, y=90)
         ttk.Label(self.ventana1, text="Hay Obitos?").place(x=850, y=60)
         
