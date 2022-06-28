@@ -12,6 +12,9 @@ from tkinter import messagebox as mb
 
 #Definicion
 
+def listado_bomberos():
+    exit()
+
 def habilitarIncendio():
 	checkbox1.state(["!disabled"]) and checkbox2.state(["!disabled"]) and checkbox3.state(["!disabled"]) and checkbox4.state(["!disabled"]) 
 	checkbox5.state(["!disabled"]) and checkbox6.state(["!disabled"]) and checkbox7.state(["!disabled"]) and checkbox8.state(["!disabled"])  
@@ -343,7 +346,7 @@ menuInventario.add_command(label="Uniformes", command=receptor)
 menuInventario.add_command(label="Alimentos", command=receptor)
         
         #SubMenu Listado de Bomberos
-menuBomberos.add_command(label="Ver Listado de Bomberos", command=receptor)
+menuBomberos.add_command(label="Ver Listado de Bomberos", command=listado_bomberos)
 menuBomberos.add_command(label="Agregar Bombero", command=receptor)
 menuBomberos.add_command(label="Editar Bombero", command=receptor)
 menuBomberos.add_command(label="Eliminar Bombero", command=receptor)
