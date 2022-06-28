@@ -139,79 +139,78 @@ def mostrar():
 	if(intcheck1.get()==1):
 		tipoSiniestro=tipoSiniestro+"INCENDIO: "
 	if(intcheck2.get()==1):
-		tipoSiniestro=tipoSiniestro+", Vivienda"
+		tipoSiniestro=tipoSiniestro+"| Vivienda |"
 	if(intcheck3.get()==1):
-		tipoSiniestro=tipoSiniestro+", Comercio"
+		tipoSiniestro=tipoSiniestro+"| Comercio |"
 	if(intcheck4.get()==1):
-		tipoSiniestro=tipoSiniestro+", Industria"
+		tipoSiniestro=tipoSiniestro+"| Industria |"
 	if(intcheck5.get()==1):
-		tipoSiniestro=tipoSiniestro+", Vehiculo"
+		tipoSiniestro=tipoSiniestro+"| Vehiculo |"
 	if(intcheck6.get()==1):
-		tipoSiniestro=tipoSiniestro+", Campos"
+		tipoSiniestro=tipoSiniestro+"| Campos |"
 	if(intcheck7.get()==1):
-		tipoSiniestro=tipoSiniestro+", Rollos"
+		tipoSiniestro=tipoSiniestro+"| Rollos |"
 	if(intcheck8.get()==1):
-		tipoSiniestro=tipoSiniestro+", Otros"
+		tipoSiniestro=tipoSiniestro+"| Otros |"
 	if(intcheck9.get()==1):
 		tipoSiniestro=tipoSiniestro+"ACCIDENTE: "
 	if(intcheck10.get()==1):
-		tipoSiniestro=tipoSiniestro+", Urbano"
+		tipoSiniestro=tipoSiniestro+"| Urbano |"
 	if(intcheck11.get()==1):
-		tipoSiniestro=tipoSiniestro+", Rural"
+		tipoSiniestro=tipoSiniestro+"| Rural |"
 	if(intcheck12.get()==1):
-		tipoSiniestro=tipoSiniestro+", Automovil"
+		tipoSiniestro=tipoSiniestro+"| Automovil |"
 	if(intcheck13.get()==1):
-		tipoSiniestro=tipoSiniestro+", Colectivo"
+		tipoSiniestro=tipoSiniestro+"| Colectivo |"
 	if(intcheck14.get()==1):
-		tipoSiniestro=tipoSiniestro+", Moto"
+		tipoSiniestro=tipoSiniestro+"| Moto |"
 	if(intcheck15.get()==1):
-		tipoSiniestro=tipoSiniestro+", Tren"
+		tipoSiniestro=tipoSiniestro+"| Tren |"
 	if(intcheck16.get()==1):
-		tipoSiniestro=tipoSiniestro+", Animal"
+		tipoSiniestro=tipoSiniestro+"| Animal |"
 	if(intcheck17.get()==1):
-		tipoSiniestro=tipoSiniestro+", Otro"
+		tipoSiniestro=tipoSiniestro+"| Otro |"
 	if(intcheck18.get()==1):
 		tipoSiniestro=tipoSiniestro+"RESCATE: "
 	if(intcheck19.get()==1):
-		tipoSiniestro=tipoSiniestro+", Persona"
+		tipoSiniestro=tipoSiniestro+"| Persona |"
 	if(intcheck20.get()==1):
-		tipoSiniestro=tipoSiniestro+", Animal"
+		tipoSiniestro=tipoSiniestro+"| Animal |"
 	if(intcheck21.get()==1):
-		tipoSiniestro=tipoSiniestro+", Vivo"
+		tipoSiniestro=tipoSiniestro+"| Vivo |"
 	if(intcheck22.get()==1):
-		tipoSiniestro=tipoSiniestro+", Muerto"
+		tipoSiniestro=tipoSiniestro+"| Muerto |"
 	if(intcheck23.get()==1):
-		tipoSiniestro=tipoSiniestro+", Libre"
+		tipoSiniestro=tipoSiniestro+"| Libre |"
 	if(intcheck24.get()==1):
-		tipoSiniestro=tipoSiniestro+", Atrapado"
+		tipoSiniestro=tipoSiniestro+"| Atrapado |"
 	if(intcheck25.get()==1):
-		tipoSiniestro=tipoSiniestro+", Ahogado"
+		tipoSiniestro=tipoSiniestro+"| Ahogado |"
 	if(intcheck26.get()==1):
 		tipoSiniestro=tipoSiniestro+"OTRO SERVICIO: "
 	if(intcheck27.get()==1):
-		tipoSiniestro=tipoSiniestro+", Prevencion"
+		tipoSiniestro=tipoSiniestro+"| Prevencion |"
 	if(intcheck28.get()==1):
-		tipoSiniestro=tipoSiniestro+", Traslado"
+		tipoSiniestro=tipoSiniestro+"| Traslado |"
 	if(intcheck29.get()==1):
-		tipoSiniestro=tipoSiniestro+", Arbol Caido"
+		tipoSiniestro=tipoSiniestro+"| Arbol Caido |"
 	if(intcheck30.get()==1):
-		tipoSiniestro=tipoSiniestro+", Cable Colgado"
+		tipoSiniestro=tipoSiniestro+"| Cable Colgado |"
 	if(intcheck31.get()==1):
-		tipoSiniestro=tipoSiniestro+", Derrumbe"
+		tipoSiniestro=tipoSiniestro+"| Derrumbe |"
 	if(intcheck32.get()==1):
-		tipoSiniestro=tipoSiniestro+", Escape de Gas"
+		tipoSiniestro=tipoSiniestro+"| Escape de Gas |"
 	if(intcheck33.get()==1):
-		tipoSiniestro=tipoSiniestro+", Mat-Pel"
+		tipoSiniestro=tipoSiniestro+"| Mat-Pel |"
 	if(intcheck34.get()==1):
-		tipoSiniestro=tipoSiniestro+", Abejas/Avispas"
+		tipoSiniestro=tipoSiniestro+"| Abejas/Avispas |"
 	if(intcheck35.get()==1):
-		tipoSiniestro=tipoSiniestro+", Derrame de Combustible"
+		tipoSiniestro=tipoSiniestro+"| Derrame de Combustible |"
 	if(intcheck36.get()==1):
-		tipoSiniestro=tipoSiniestro+", Otro"
+		tipoSiniestro=tipoSiniestro+"| Otro |"
 	if(intcheck37.get()==1):
 		tipoSiniestro=tipoSiniestro+"Falsa Alarma"
 	else:
-		print(tipoSiniestro)
 		return tipoSiniestro
 
 def guardar():
