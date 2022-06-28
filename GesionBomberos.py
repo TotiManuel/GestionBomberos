@@ -16,7 +16,7 @@ barra_menus=tk.Menu(Programa)
 Programa.config(menu=barra_menus)
 
 #Menus Definidos
-menu=tk.Menu(barra_menus, tearoff=False)
+menu=tk.Menu(barra_menus, tearoff=True)
 menuArchivo=tk.Menu(barra_menus, tearoff=False)
 #SubMenus Definidos
 submenu=tk.Menu(menu,tearoff=False)
