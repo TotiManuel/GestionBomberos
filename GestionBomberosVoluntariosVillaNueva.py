@@ -251,15 +251,10 @@ def guardar():
             archi1.close()
             mb.showinfo(message="Emergencia Guardada con Exito!", title="Emergencia Guardada")
 
-def reiniciar():
-        nombrearch=FileDialog.askopenfilename(initialdir = "/home/toti/Escritorio",title = "Seleccione archivo",filetypes = (("txt files","*.txt"),("todos los archivos","*.*")))
-        if nombrearch!='':
-        	print(nombrearch)
-        	os.system(" {nombrearch}")
 
-def buscar_archivo():
+def abrir_archivo():
     fichero=FileDialog.askopenfilename(title="Abrir Fichero")
-    print(fichero)
+    os.system("open "+fichero)
 
 def elegir_color():
     color=ColorChooser.askcolor(title="Elegi un color")#Selecciona un color
@@ -318,7 +313,7 @@ barra_menus.add_cascade(label="Elementos en Reparacion", menu=menuReparacion)
 barra_menus.add_cascade(label="Opciones", menu=menuOpciones)
 
 #Opciones SubMenus Principal 
-menu.add_command(label="Abrir", command=buscar_archivo)
+menu.add_command(label="Abrir", command=abrir_archivo)
 menuArchivo.add_command(label="Opcion 2", command=elegir_color)
 menuArchivo.add_command(label="Combobox", command=combobox)
 
@@ -591,7 +586,7 @@ boton1=Button(Programa, text="Guardar Emergencia", command=guardar, background="
 boton1.config(bd=5, relief=RAISED)
 boton1.place(x=820, y=610, width=150, height=50)
 
-boton2=Button(Programa, text="Reiniciar", command=reiniciar, background="#b4b4b4")
+boton2=Button(Programa, text="Abrir Emergencia", command=abrir_archivo, background="#b4b4b4")
 boton2.config(bd=5, relief=RAISED)
 boton2.place(x=1000, y=610, width=150, height=50)
 
